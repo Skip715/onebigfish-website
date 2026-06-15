@@ -69,3 +69,40 @@ window.addEventListener('scroll', function() {
       : '0 2px 12px rgba(15,36,71,0.06)';
   }
 });
+
+// FAQ toggle
+function toggleFaq(btn) {
+  var answer = btn.nextElementSibling;
+  var isOpen = answer.classList.contains('open');
+  // Close all
+  var allAnswers = document.querySelectorAll('.faq-answer');
+  var allBtns = document.querySelectorAll('.faq-question');
+  for (var i = 0; i < allAnswers.length; i++) {
+    allAnswers[i].classList.remove('open');
+    allBtns[i].classList.remove('open');
+  }
+  // Open this one if it was closed
+  if (!isOpen) {
+    answer.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// Scroll reveal animation
+function initReveal() {
+  var elements = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+  elements.forEach(function(el) { observer.observe(el); });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', function() { initDropdowns(); initReveal(); });
+} else {
+  initReveal();
+}
