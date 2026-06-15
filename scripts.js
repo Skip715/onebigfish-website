@@ -4,6 +4,27 @@ function toggleMenu() {
   menu.classList.toggle('open');
 }
 
+// Dropdown click toggle (works on all browsers/devices)
+document.addEventListener('DOMContentLoaded', function() {
+  const toggles = document.querySelectorAll('.dropdown-toggle');
+  toggles.forEach(function(toggle) {
+    toggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const dropdown = this.closest('.nav-dropdown');
+      const menu = dropdown.querySelector('.dropdown-menu');
+      const isOpen = menu.style.display === 'block';
+      // Close all dropdowns first
+      document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+      // Toggle this one
+      menu.style.display = isOpen ? 'none' : 'block';
+    });
+  });
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
+  });
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {

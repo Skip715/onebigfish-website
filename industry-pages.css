@@ -1,7 +1,7 @@
-/* ===== INDUSTRY PAGE STYLES ===== */
+/* ===== INDUSTRY PAGE STYLES - ONE BIG FISH NAVY & GOLD ===== */
 
 .ind-hero {
-  background: linear-gradient(135deg, #1a6fd4 0%, #1557b0 100%);
+  background: linear-gradient(135deg, #0f2447 0%, #1a3a6b 100%);
   padding: 80px 24px 60px;
   text-align: center;
   color: #fff;
@@ -28,22 +28,21 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.15);
-  color: #fff;
-  border: 2px solid rgba(255,255,255,0.5);
+  background: #C9A84C;
+  color: #0f2447;
   padding: 14px 32px;
   border-radius: 50px;
   font-size: 16px;
-  font-weight: 600;
-  transition: background 0.2s;
-  backdrop-filter: blur(4px);
+  font-weight: 700;
+  transition: background 0.2s, transform 0.15s;
 }
 .ind-hero-btn:hover {
-  background: rgba(255,255,255,0.25);
+  background: #e8c96d;
+  transform: translateY(-1px);
 }
 
 .ind-body {
-  background: #1a6fd4;
+  background: #0f2447;
   padding: 0 0 60px;
 }
 .ind-grid {
@@ -53,12 +52,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  background: #1a6fd4;
 }
 .ind-content {
   background: #fff;
-  padding: 48px 48px 48px 48px;
-  border-radius: 0;
+  padding: 48px;
 }
 .ind-intro {
   font-size: 17px;
@@ -80,24 +77,25 @@
 .ind-check {
   width: 32px;
   height: 32px;
-  border: 2px solid #2d3748;
+  border: 2px solid #C9A84C;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
+  background: rgba(201,168,76,0.08);
 }
 .ind-check svg {
   width: 18px;
   height: 18px;
-  stroke: #2d3748;
+  stroke: #C9A84C;
 }
 .ind-checklist li div strong {
   display: block;
   font-size: 17px;
   font-weight: 700;
-  color: #1a2540;
+  color: #0f2447;
   margin-bottom: 4px;
 }
 .ind-checklist li div span {
@@ -134,16 +132,8 @@
 }
 
 @media (max-width: 768px) {
-  .ind-grid {
-    grid-template-columns: 1fr;
-  }
-  .ind-img img {
-    min-height: 260px;
-  }
-  .ind-content {
-    padding: 32px 24px;
-  }
-  .ind-hero h1 {
-    font-size: 28px;
-  }
+  .ind-grid { grid-template-columns: 1fr; }
+  .ind-img img { min-height: 260px; }
+  .ind-content { padding: 32px 24px; }
+  .ind-hero h1 { font-size: 28px; }
 }
