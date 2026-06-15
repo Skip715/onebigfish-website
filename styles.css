@@ -171,6 +171,7 @@ ul { list-style: none; }
   padding: 8px;
   z-index: 200;
 }
+.dropdown-menu.open { display: block; }
 .dropdown-menu a {
   display: block;
   padding: 10px 14px;
