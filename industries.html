@@ -258,5 +258,39 @@
 </footer>
 
 <script src="scripts.js"></script>
+
+<script>
+// Dropdown
+document.addEventListener('DOMContentLoaded', function() {
+  var toggles = document.querySelectorAll('.dropdown-toggle');
+  for (var i = 0; i < toggles.length; i++) {
+    toggles[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var menu = this.parentNode.querySelector('.dropdown-menu');
+      var allMenus = document.querySelectorAll('.dropdown-menu');
+      for (var j = 0; j < allMenus.length; j++) { allMenus[j].classList.remove('open'); }
+      menu.classList.add('open');
+      if (this.classList.contains('is-open')) {
+        menu.classList.remove('open');
+        this.classList.remove('is-open');
+      } else {
+        this.classList.add('is-open');
+      }
+    });
+  }
+  document.addEventListener('click', function() {
+    var allMenus = document.querySelectorAll('.dropdown-menu');
+    var allToggles = document.querySelectorAll('.dropdown-toggle');
+    for (var j = 0; j < allMenus.length; j++) { allMenus[j].classList.remove('open'); }
+    for (var k = 0; k < allToggles.length; k++) { allToggles[k].classList.remove('is-open'); }
+  });
+});
+function toggleMenu() {
+  var menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('open');
+}
+</script>
+
 </body>
 </html>
