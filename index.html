@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Big Fish – Simplifying Payroll, Maximising Efficiency</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <span>🍪 By using this website, you agree to our <a href="#">cookie policy</a>.</span>
+  <button onclick="document.getElementById('cookieBanner').style.display='none'">✕</button>
+</div>
+
+<!-- Promo Bar -->
+<div class="promo-bar">
+  <span class="promo-icon">%</span>
+  <span>We'll match any competitor's price – plus, enjoy 25% lower timesheet processing costs!</span>
+  <a href="contact.html" class="promo-link">Learn more</a>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="public/logo.jpeg" alt="One Big Fish" />
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link active">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Home
+      </a>
+      <div class="nav-dropdown">
+        <button class="nav-link dropdown-toggle">
+          Industries We Serve
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="dropdown-menu">
+          <a href="industries.html#construction">🔨 Construction &amp; Trade</a>
+          <a href="industries.html#logistics">🚚 Logistics &amp; Transport</a>
+          <a href="industries.html#warehousing">🏭 Warehousing &amp; Industrial</a>
+          <a href="industries.html#rail">🚂 Rail &amp; Traffic Management</a>
+          <a href="industries.html#recruitment">🌐 Recruitment &amp; Labour Supply</a>
+          <a href="industries.html#facilities">🏢 Facilities Management &amp; Security</a>
+        </div>
+      </div>
+      <a href="blog.html" class="nav-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        Blog
+      </a>
+      <a href="contact.html" class="nav-link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Contact
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:info@onebigfish.co.uk" class="nav-email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@onebigfish.co.uk
+      </a>
+      <a href="contact.html" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Get in touch
+      </a>
+    </div>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="industries.html">Industries We Serve</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn-primary">Get in touch</a>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-rating">
+        <span class="rating-label">Rated 5 Stars</span>
+        <div class="stars">★★★★★</div>
+      </div>
+      <h1>Simplifying Payroll,<br />Maximising Efficiency</h1>
+      <p>At One Big Fish, we make payroll simple, transparent, and reliable. Regardless of your industry, we ensure your workforce gets paid accurately and on time.</p>
+      <div class="hero-cta">
+        <div class="avatar-stack">
+          <img src="https://i.pravatar.cc/40?img=1" alt="team" />
+          <img src="https://i.pravatar.cc/40?img=2" alt="team" />
+          <img src="https://i.pravatar.cc/40?img=3" alt="team" />
+        </div>
+        <a href="contact.html" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Get in touch
+        </a>
+      </div>
+    </div>
+    <div class="hero-images">
+      <div class="hero-img-top">
+        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80" alt="Payroll documents" />
+      </div>
+      <div class="hero-img-bottom">
+        <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=500&q=80" alt="Business meeting" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Cards -->
+<section class="features">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3>Price Match Guarantee</h3>
+        <p>We match any competitor's price—plus 25% lower timesheet processing costs than industry leaders.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Fast, Reliable Payments</h3>
+        <p>Ensure your workforce is paid accurately and promptly, with no payroll delays or errors.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon gold">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3>Fully Compliant Payroll</h3>
+        <p>We handle CIS, Umbrella, and PAYE payroll, ensuring you stay fully compliant with all regulations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payroll Solutions Section -->
+<section class="solutions">
+  <div class="container">
+    <div class="solutions-grid">
+      <div class="solutions-content">
+        <h2>Payroll Solutions for Every Industry</h2>
+        <p>From construction to logistics, we provide flexible, industry-specific payroll solutions that take the stress out of payments. We handle the admin so you can focus on growing your business.</p>
+        <ul class="checklist">
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> CIS for subcontractors</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Umbrella for flexible workers</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> PAYE for full-time staff</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Automated payroll processing</li>
+          <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pensions &amp; tax compliance</li>
+        </ul>
+      </div>
+      <div class="solutions-right">
+        <div class="solutions-img-card">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80" alt="Team working together" />
+          <div class="img-label">
+            <span>Umbrella Payroll</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </div>
+        </div>
+        <div class="solutions-mini-card">
+          <div class="mini-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1a3a6b" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+          </div>
+          <div>
+            <strong>Flexible payroll for temp &amp; contract workers</strong>
+            <p>Stay tax-compliant while giving your workers the benefits of a hassle-free payment structure.</p>
+          </div>
+        </div>
+        <a href="industries.html" class="discover-link">Discover our services →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Save Section -->
+<section class="save-section">
+  <div class="container">
+    <div class="save-grid">
+      <div class="save-content">
+        <h2>Save</h2>
+        <p>Our payroll experts are ready to help you cut costs and streamline your payments.</p>
+      </div>
+      <div class="save-card">
+        <p>Discover how One Big Fish can save you time and money.</p>
+        <a href="contact.html" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Get in touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section">
+  <div class="container">
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1553484771-047a44eee27b?w=600&q=80" alt="Reduce Payroll Costs" />
+        </div>
+        <div class="blog-body">
+          <span class="blog-tag">Payroll Guides &amp; Compliance</span>
+          <h3>How to Reduce Payroll Costs Without Compromising on Compliance &amp; Efficiency</h3>
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            February 23, 2025
+          </div>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-img">
+          <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80" alt="CIS vs Umbrella" />
+        </div>
+        <div class="blog-body">
+          <span class="blog-tag">Payroll Guides &amp; Compliance</span>
+          <h3>CIS vs Umbrella vs PAYE Payroll: Which is Best for Your Business?</h3>
+          <div class="blog-meta">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            January 15, 2025
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="cta-banner">
+  <div class="container">
+    <div class="cta-grid">
+      <a href="contact.html" class="cta-card cta-card--left">
+        <span>Get in touch with us</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="industries.html" class="cta-card cta-card--right">
+        <span>Check our services</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="public/logo.jpeg" alt="One Big Fish" />
+        <p>Reliable, transparent payroll solutions for businesses across construction, logistics, warehousing, and more.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Industries We Serve</h4>
+        <a href="industries.html#construction">Construction &amp; Trade</a>
+        <a href="industries.html#logistics">Logistics &amp; Transport</a>
+        <a href="industries.html#warehousing">Warehousing &amp; Industrial</a>
+        <a href="industries.html#rail">Rail &amp; Traffic Management</a>
+        <a href="industries.html#recruitment">Recruitment &amp; Labour Supply</a>
+        <a href="industries.html#facilities">Facilities Management &amp; Security</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company Information</h4>
+        <div class="footer-info-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <span>Open 8am to 6pm, Monday to Friday</span>
+        </div>
+        <div class="footer-info-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>[Address to be confirmed]</span>
+        </div>
+        <div class="footer-info-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@onebigfish.co.uk</span>
+        </div>
+        <div class="footer-info-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.45 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>[Phone number to be confirmed]</span>
+        </div>
+        <a href="contact.html" class="btn-footer">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          Speak to a Specialist
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © 2025 One Big Fish Ltd | All rights reserved</span>
+    </div>
+  </div>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
